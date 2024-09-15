@@ -1,0 +1,77 @@
+register
+verify
+
+login
+
+Profile
+update Profile
+
+update password
+
+forget password
+reset password
+
+
+
+//
+login
+  make form
+  hit api(token) by clicking btn of login .It give token
+  save token to local storage
+  then navigate at /admin page
+
+//after login
+  my Profile
+   link => /admin/my-Profile
+   route => /admin/my-Profile =>yo url ko component banauna
+   component name = AdminProfile
+     hit api on page load(useEffect ma)
+     token => get token from localStorage
+
+//to Logout
+   link => /admin/Logout
+   route =>  /admin/Logout => yo url ko component banauna
+    component name = AdminLogout
+    then,remove  token from localStroage
+    redirect it to home page i.e /
+
+  update Profile
+   we dont update email*,password*,role*,  while updating profile 
+    make update profile btn at myProfile.when clicked change link to /admin/profile-update 
+    route => /admin/profile-update =>yo url ko component banauna
+    component name = updateProfile
+        here we, make form, btn => update (hit api)
+          for data populate(occupy) => get myProfile api on page load and set data
+
+
+  update password(we are login and now we want newPassword)
+        link => /admin/update-password
+         route =>  /admin/update-password => yo url ko component banauna
+          component name = AdminPasswordUpdate
+          make a form for newPassword and oldPassword
+          make a UpdatePssword btn
+           hit api
+           logout(remove token from localStorage)
+           login page
+   
+  forget password(we are not login)
+    forget password btn at login page => when clicked navigate to "/admin/forget-password"
+    make component for "/admin/forget-password" i.e AdminForgetPassword
+    AdminForgetPassword has form for only email
+    
+  reset password
+    route => for /reset-password =>  yo url ko component banauna
+    component name = AdminResetPassword
+    make form for password field
+    sucess then redirect to /admin/login i.e login page
+
+//here authorization is done in backend ok
+    read all user =>can see => admin or superAdmin
+    read specefic user =>can see => admin or superAdmin
+    delete user =>can do => only superAdmin
+    update user  =>can see => admin or superAdmin
+
+
+  ////note: 
+    ->useEffect is Asyntronous function so,it is always render at last.
+    ->navigation is done in btn click or useEffect  
