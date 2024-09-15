@@ -71,6 +71,17 @@ login
     delete user =>can do => only superAdmin
     update user  =>can see => admin or superAdmin
 
+   //while login appairs element must be
+      myProfile
+      updatePassword
+      logout
+      updateProfile
+      readAllUser
+
+   //while logout appairs element must be
+     login
+     register
+
 
   ////note: 
     ->useEffect is Asyntronous function so,it is always render at last.

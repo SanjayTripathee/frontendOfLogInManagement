@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { GlobalVariableContex } from '../../App'
 
 const AdminLogout = () => {
+  let global = useContext(GlobalVariableContex)
     let navigate = useNavigate()
-    localStorage.removeItem("myToken")
+    
     useEffect(()=>{
+      localStorage.removeItem("myToken")
+      global.setToken(null)
         navigate('/')
-    },[])
+    },[])  
   return (
     <div>AdminLogout</div>
   )
