@@ -22,7 +22,7 @@ const ReadSpeceficUser = () => {
         }
       })
       // console.log(result.data.data)
-      console.log(result)
+      // console.log(result)
       setuser(result.data.data)
     } catch (error) {
       

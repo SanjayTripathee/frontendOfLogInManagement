@@ -28,11 +28,11 @@ const ReactLink = () => {
           </NavLink>
         </>
       ) : (
-        <>
-          <NavLink to="/admin/login" style={{ margin: "20px" }}>
-            Admin Login
-          </NavLink>
-        </>
+       <>
+         <NavLink to="/admin/login" style={{ margin: "20px" }}>
+          Admin Login
+        </NavLink>
+       </>
       )}
     </div>
   );

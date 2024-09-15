@@ -82,7 +82,17 @@ login
      login
      register
 
+//note:while getting token
+   add token to useContex from localStorage
+
+   if other component needs token
+    get token from useContex rather then localStorage (for page refresh purpose)
+
+  while changing token
+   change to localStorage and change to useContex
 
   ////note: 
     ->useEffect is Asyntronous function so,it is always render at last.
     ->navigation is done in btn click or useEffect  
+
+

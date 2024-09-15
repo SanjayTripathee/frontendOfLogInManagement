@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { bUrl } from '../../constant';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
+import htmlDateFormat from '../../utils/dateFormat';
 
 
 const AdminProfileUpdate = () => {
@@ -99,7 +100,7 @@ const AdminProfileUpdate = () => {
 
  <div>
   <label htmlFor="dob">DOB:</label>
-  <input id='dob' type="date" value={dob}
+  <input id='dob' type="date" value={htmlDateFormat(dob)}
   onChange={(e)=>{
     setDOB(e.target.value)
   }}
