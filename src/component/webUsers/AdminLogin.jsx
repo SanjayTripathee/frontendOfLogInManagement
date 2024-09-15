@@ -1,12 +1,14 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { toast } from 'react-toastify'
 import { bUrl } from '../../constant'
 import { useNavigate } from 'react-router-dom'
-
+import { GlobalVariableContex } from '../../App'
 
 const AdminLogin = () => {
   let navigate = useNavigate()
+
+  let global = useContext(GlobalVariableContex);
 
   let [email,setEmail] = useState("")
   let [password,setPassword] = useState("")          
@@ -26,6 +28,7 @@ const AdminLogin = () => {
       })
       let myToken = result.data. myToken
       localStorage.setItem("myToken",myToken)
+      global.setToken(myToken)
       // console.log(result)//result bhitra ko data ko msg aaucha...
       navigate("/admin")  
     } catch (error) {
