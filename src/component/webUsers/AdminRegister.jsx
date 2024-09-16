@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { bUrl } from '../../constant';
 import { toast } from 'react-toastify'
+import '../cssFolder/adminRegister.css'
 
 
 const AdminRegister = () => {
@@ -62,7 +63,7 @@ const AdminRegister = () => {
   return (
     <div>
       <form onSubmit={handleSubmit} >
-<div>
+<div className='input'>
 
 <div>
   <label htmlFor="fullName">Full Name:</label>
@@ -124,7 +125,7 @@ const AdminRegister = () => {
 </div>    
 
 <div>
-  <button type='submit'>Register</button>
+  <button className='btn' type='submit'>Register</button>
 </div>   
 
 </form>

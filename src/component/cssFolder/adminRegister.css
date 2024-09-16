@@ -1,0 +1,87 @@
+/* General styling */
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input input[type="text"], 
+  input[type="email"],
+  input[type="password"], 
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .btn {
+    background-color: #32259a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  input:focus {
+    border-color: #80bdff;
+    outline: none;
+  }
+  
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .radio-group div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-group label {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 500px) {
+    form {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
