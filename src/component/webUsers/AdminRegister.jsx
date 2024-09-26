@@ -77,7 +77,7 @@ const AdminRegister = () => {
 
  <div>
   <label htmlFor="email">Email:</label>
-  <input id='email' type="emil" value={email}  
+  <input style={{width:"100%"}} id='email' type="emil" value={email}  
   onChange={(e)=>{
     setEmail(e.target.value)
   }}

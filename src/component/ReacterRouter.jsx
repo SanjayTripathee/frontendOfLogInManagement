@@ -53,7 +53,7 @@ const ReacterRouter = () => {
             )}
             <Route
               path="forgot-password"
-              element={<AdminForgetPassword />}
+              element={<AdminForgetPassword />}  
             ></Route>
           </Route>
         </Route>
